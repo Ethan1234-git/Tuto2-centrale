@@ -22,11 +22,17 @@ def moyenne(valeurs):
 
     ---
     """
-    print("!! TODO : Compléter la fonction moyenne !!", end=" ")
-    pass
+    if valeurs == []:
+        return False
+    n = 0
+    s = 0
+    for e in valeurs:
+        s += e
+        n += 1
+    return s / n
 
 
 if __name__ == "__main__":
     Console().print(Markdown(moyenne.__doc__))
     print("moyenne([10, 20, 15]) :", end=" ")
-    print(moyenne([10, 20, 15]))
+    print(moyenne([10, 20, 15])) 
